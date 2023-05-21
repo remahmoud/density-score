@@ -1,0 +1,50 @@
+{
+    "name": "density-score",
+    "description": "A simple library to calculate the keyword density score from a text.",
+    "version": "1.0.0",
+    "import": "./build/mjs/index.js",
+    "require": "./build/cjs/index.js",
+    "default": "./build/mjs/index.js",
+    "types": "./build/types/index.d.ts",
+    "author": "Mahmoud Ibrahiam",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "@types/jest": "^29.5.1",
+        "@types/node": "^20.2.1",
+        "@types/stopword": "^2.0.0",
+        "jest": "^29.5.0",
+        "rimraf": "^5.0.1",
+        "terser": "^5.17.4",
+        "ts-jest": "^29.1.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "scripts": {
+        "test": "jest",
+        "dev": "ts-node src/index.ts",
+        "preminify": "rimraf build & tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+        "minify": "terser --compress --mangle --output ./build/mjs/index.js -- ./build/mjs/index.js & terser --compress --mangle --output ./build/cjs/index.js -- ./build/cjs/index.js"
+    },
+    "files": [
+        "build"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/remahmoud/density-score"
+    },
+    "homepage": "https://github.com/remahmoud/density-score#readme",
+    "keywords": [
+        "keyword",
+        "density",
+        "score",
+        "seo",
+        "seo score",
+        "keyword density",
+        "keyword density score"
+    ],
+    "dependencies": {
+        "natural": "^6.3.0",
+        "stopword": "^2.0.8"
+    }
+}
