@@ -8,7 +8,7 @@ interface IWord {
 
 // IwordDensity interface
 export interface IWordDensity {
-    word: string;
+    keyword: string;
     frequency: number;
     density: number;
 }
@@ -67,7 +67,7 @@ function densityScore(
     // word density
     const wordDensity = sortedWords.map((word) => {
         return {
-            word: word[0],
+            keyword: word[0],
             frequency: word[1],
             density: word[1] / wordsCount,
         };

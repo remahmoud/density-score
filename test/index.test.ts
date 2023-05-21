@@ -23,9 +23,9 @@ describe("Density Score", () => {
             "Hello world, this is a test. This is a test, hello world.";
         const wordDensity = densityScore(text);
         expect(wordDensity).toEqual([
-            { word: "hello", frequency: 2, density: 2 / 6 },
-            { word: "world", frequency: 2, density: 2 / 6 },
-            { word: "test", frequency: 2, density: 2 / 6 },
+            { keyword: "hello", frequency: 2, density: 2 / 6 },
+            { keyword: "world", frequency: 2, density: 2 / 6 },
+            { keyword: "test", frequency: 2, density: 2 / 6 },
         ]);
     });
 
@@ -42,12 +42,12 @@ describe("Density Score", () => {
         const density = 2 / wordsCount;
         const wordDensity = densityScore(text, false);
         expect(wordDensity).toEqual([
-            { word: "hello", frequency: 2, density },
-            { word: "world", frequency: 2, density },
-            { word: "this", frequency: 2, density },
-            { word: "is", frequency: 2, density },
-            { word: "a", frequency: 2, density },
-            { word: "test", frequency: 2, density },
+            { keyword: "hello", frequency: 2, density },
+            { keyword: "world", frequency: 2, density },
+            { keyword: "this", frequency: 2, density },
+            { keyword: "is", frequency: 2, density },
+            { keyword: "a", frequency: 2, density },
+            { keyword: "test", frequency: 2, density },
         ]);
     });
 });
